@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const metinElementi = document.getElementById("metin");
     const yazilacakMetin = `
         
-        4 yıldır yazılımla ilgileniyorum.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Autem delectus nobis velit, iure temporibus minima reiciendis.
-        Molestiae dolores asperiores quidem laborum, voluptatum tempore,
-        blanditiis ut necessitatibus adipisci dolor quo illo sed totam.
-        Repellendus doloribus eveniet numquam, unde culpa magnam perspiciatis
-        error ut accusantium. Ex dolores cum incidunt, commodi eveniet accusantium.
+        4 yıldır yazılımla ilgileniyorum. 
+        Bu süre zarfında C#, JavaScript, Python, HTML ve CSS dilleriyle çeşitli projelerde yer aldım. 
+        C# ile masaüstü uygulamaları geliştirirken, JavaScript ve HTML/CSS ile web uygulamaları üzerinde çalışmalar yaptım. 
+        Python, veri analizi ve otomasyon projelerinde önemli bir rol üstlendi. 
+        Bu projeler sayesinde farklı becerilerimi geliştirme fırsatı buldum ve yeni teknolojilere adapte olmayı öğrendim. 
+        Edindiğim deneyimler, yazılım geliştirme sürecine dair daha derin bir anlayış kazanmama yardımcı oldu. 
+        Yazılım alanında kendimi geliştirmeye devam etmekteyim ve yeni projelere açık bir yaklaşım sergiliyorum.
     `;
 
     let index = 0;
