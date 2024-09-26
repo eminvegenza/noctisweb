@@ -17,9 +17,24 @@ document.addEventListener("DOMContentLoaded", function() {
         if (index < yazilacakMetin.length) {
             metinElementi.innerHTML += yazilacakMetin[index];
             index++;
-            setTimeout(yazdir, 20); // 100ms bekleyip bir sonraki harfi yaz
+            setTimeout(yazdir, 20); 
         }
     }
 
     yazdir(); // Yazma işlemini başlat
 });
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('item1').classList.add('revealed');
+    }, 500);
+
+    setTimeout(function() {
+        document.getElementById('item2').classList.add('revealed');
+    }, 1000);
+
+    setTimeout(function() {
+        document.getElementById('item3').classList.add('revealed');
+    }, 1500); 
+});
+
