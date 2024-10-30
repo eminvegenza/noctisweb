@@ -444,6 +444,19 @@ body {
             margin: 0;
             overflow-y: auto; /* Dikey kaydırma çubuğunu göster */
         }
+        .navbar {
+            background: rgba(34, 34, 238, 0.726);
+            font-family: calibri;
+            padding: 5px 10px;
+            position: fixed; /* Sabit konum */
+            top: 0; /* Sayfanın en üstü */
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+            z-index: 1000; /* Diğer içeriklerin üstünde görünmesi için */
+        }
+        
         /* GIF'i yuvarlaklaştır */
         .gif {
             position: absolute;
