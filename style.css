@@ -94,9 +94,10 @@ li a:hover {
 }
 
 .social-item {
-    display: flex;
+    margin-bottom: 100%;
+    
     align-items: center;
-    justify-content: flex-start;
+    justify-content: left;
     gap: 15px;
     text-decoration: none;
     opacity: 0;
@@ -110,6 +111,7 @@ li a:hover {
 }
 
 .icon {
+    
     color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -427,19 +429,18 @@ body {
 }
 
 /* Mobil uyumlu düzenlemeler */
-@media (max-width: 512px) {
-    /* Ana yapıyı dikey sıraya al */
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 60px; /* Navbar'ın yüksekliği kadar boşluk ekle */
-        margin: 0;
-        overflow-x: hidden; /* Sağ kaymayı önle */
-    }
+
 
     /* GIF’i üstte sabitle */
     @media (max-width: 512px) {
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px; /* Navbar'ın yüksekliği kadar boşluk ekle */
+            margin: 0;
+            overflow-x: hidden; /* Sağ kaymayı önle */
+        }
         /* GIF'i yuvarlaklaştır */
         .gif {
             top: 10%; /* Yukarıdan %10 boşluk */
@@ -468,11 +469,11 @@ body {
     
         .social-container {
             position: fixed; /* İkonları sabitler */
-            bottom: 1px; /* Ekranın alt kısmından 20 piksel yukarıda yer alacak */
+            bottom: -125px; /* Ekranın alt kısmından 20 piksel yukarıda yer alacak */
             left: 50%; /* Ekranın ortasına yerleştirir */
             transform: translateX(-50%); /* Ortalamak için sola kaydırır */
             display: flex;
-            flex-direction: column; /* İkonları dikey sıralar */
+            flex-direction: row; /* İkonları dikey sıralar */
             gap: 5px; /* İkonlar arasında boşluk ekle */
             width: 50%; /* Genişliği %50 yap */
             max-width: 200px; /* İsteğe göre genişliği ayarla */
@@ -507,9 +508,9 @@ body {
 
     .social-container {
         position: fixed;
-        right: 40%;
+        left: 56%;
         top: 2%;
-        transform: translateX(-50%); /* Ortalamak için */
+        
     }
 
     .navbar {
@@ -519,4 +520,4 @@ body {
         z-index: 1000; /* En üstte görünmesi için */
     }
 }
-}
+
