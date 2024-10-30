@@ -434,17 +434,21 @@ body {
     /* GIF’i üstte sabitle */
     @media (max-width: 512px) {
         body {
+            height: auto;
+            width: auto;
+            font-family: Arial, sans-serif;
+            background-color: rgb(25, 25, 25);
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 60px; /* Navbar'ın yüksekliği kadar boşluk ekle */
+            flex-direction: column; /* Dikey yönde hizalama */
+            justify-content: flex-start; /* Üstten başlayarak hizala */
             margin: 0;
-            overflow-x: hidden; /* Sağ kaymayı önle */
+            overflow-y: auto; /* Dikey kaydırma çubuğunu göster */
         }
         /* GIF'i yuvarlaklaştır */
         .gif {
-            top: 10%; /* Yukarıdan %10 boşluk */
-            left: 27%; /* Soldan %1 boşluk */
+            position: absolute;
+            top: 15%; /* Yukarıdan %10 boşluk */
+            left: 26%; /* Soldan %1 boşluk */
             width: 50%; /* Tam genişlikte yap */
             max-width: 200px; /* Maksimum genişlik 200px */
             height: 200px; /* Yüksekliği 200px olarak ayarla, dairesel görünüm için */
@@ -457,7 +461,8 @@ body {
     
         /* Bilgi bölümünü ortala */
         .bilgi {
-            left: 13%;
+            position: relative;
+            left: 2%;
             width: 100%; /* Tam genişlik */
             max-width: 320px; /* İsteğe göre genişlik */
             text-align: center; /* Metni ortala */
@@ -468,12 +473,14 @@ body {
         
     
         .social-container {
-            position: fixed; /* İkonları sabitler */
-            bottom: -125px; /* Ekranın alt kısmından 20 piksel yukarıda yer alacak */
+            position: absolute; /* İkonları sabitler */
+            top: 40%; /* Ekranın alt kısmından %20 yukarıda yer alacak */
             left: 50%; /* Ekranın ortasına yerleştirir */
             transform: translateX(-50%); /* Ortalamak için sola kaydırır */
-            display: flex;
-            flex-direction: row; /* İkonları dikey sıralar */
+            display: flex; /* Flex düzenini kullan */
+            align-items: center; /* Dikeyde ortalama */
+            justify-content: center; /* Yatayda ortalama */
+            flex-direction: row; /* İkonları yatay sıralar */
             gap: 5px; /* İkonlar arasında boşluk ekle */
             width: 50%; /* Genişliği %50 yap */
             max-width: 200px; /* İsteğe göre genişliği ayarla */

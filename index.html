@@ -53,6 +53,19 @@
         </div>
     </div>
 </div>
+<script>
+    const socialContainer = document.querySelector('.social-container');
+    
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY; // Mevcut kaydırma miktarını al
+        if (scrollY > 200) { // Eğer sayfa 200 pikselden fazla kaydırılmışsa
+            socialContainer.style.bottom = '20px'; // Alt kenardan 20 piksel yukarıda tut
+        } else {
+            socialContainer.style.bottom = '-125px'; // Ekranın dışına çıkart
+        }
+    });
+</script>
+
 
 
 
