@@ -434,58 +434,43 @@ body {
         align-items: center;
         padding-top: 60px; /* Navbar'ın yüksekliği kadar boşluk ekle */
         margin: 0;
-        overflow-x: hidden; /* Sağ kaymayı önle */
+        height: 100vh; /* Sayfanın tam yüksekliğini al */
+        justify-content: space-between; /* Elemanlar arasında boşluk bırak */
     }
 
-    /* GIF’i üstte sabitle */
-    @media (max-width: 512px) {
-        /* GIF'i yuvarlaklaştır */
-        .gif {
-            top: 10%; /* Yukarıdan %10 boşluk */
-            left: 27%; /* Soldan %1 boşluk */
-            width: 50%; /* Tam genişlikte yap */
-            max-width: 200px; /* Maksimum genişlik 200px */
-            height: 200px; /* Yüksekliği 200px olarak ayarla, dairesel görünüm için */
-            border-radius: 50%; /* Yuvarlak görünüm */
-            /* GIF ve yazı arasına boşluk ekle */
-             /* Konumlandırma */
-            object-fit: cover; /* İçeriği kapsamasını sağla */
-        }
-        
-    
-        /* Bilgi bölümünü ortala */
-        .bilgi {
-            left: 13%;
-            width: 100%; /* Tam genişlik */
-            max-width: 320px; /* İsteğe göre genişlik */
-            text-align: center; /* Metni ortala */
-            margin-bottom: 20px; /* Bilgi ve ikonlar arasında boşluk ekle */
-        }
-    
-        /* Sosyal medya ikonlarını alt sırada ortala */
-        
-    
-        .social-container {
-            position: fixed; /* İkonları sabitler */
-            bottom: 1px; /* Ekranın alt kısmından 20 piksel yukarıda yer alacak */
-            left: 50%; /* Ekranın ortasına yerleştirir */
-            transform: translateX(-50%); /* Ortalamak için sola kaydırır */
-            display: flex;
-            flex-direction: column; /* İkonları dikey sıralar */
-            gap: 5px; /* İkonlar arasında boşluk ekle */
-            width: 50%; /* Genişliği %50 yap */
-            max-width: 200px; /* İsteğe göre genişliği ayarla */
-            z-index: 100; /* Diğer içeriklerin üstünde görünmesi için */
-        }
-        
-        .social-container img { /* İkonlar için genel stil */
-            width: 30px; /* İkon boyutunu ayarla */
-            height: 30px; /* İkon yüksekliğini ayarla */
-        }
-        
-        
-        
+    /* GIF’i tam genişlikte ve ortalanmış yap */
+    .gif {
+        width: 80%; /* Genişliği %80 yap */
+        max-width: 200px; /* GIF boyutunu küçült */
+        height: auto; /* Yüksekliği otomatik ayarla */
+        border-radius: 50%; /* Yuvarlak yap */
+        margin-bottom: 20px; /* GIF ve yazı arasına boşluk ekle */
     }
+
+    /* Bilgi bölümünü ortala */
+    .bilgi {
+        width: 90%; /* Tam genişlik */
+        max-width: 320px; /* İsteğe göre genişlik */
+        text-align: center; /* Metni ortala */
+        margin-bottom: auto; /* Bilgi ve ikonlar arasında boşluk ekle */
+    }
+
+    /* Sosyal medya ikonlarını alt sırada ortala */
+    .social-container {
+        display: flex;
+        flex-direction: row; /* İkonları yatay sıralar */
+        justify-content: center; /* İkonları ortala */
+        gap: 10px; /* İkonlar arasında boşluk ekle */
+        width: 90%; /* Genişliği %90 yap */
+        max-width: 400px; /* İsteğe göre genişlik */
+        margin-top: auto; /* İkonları sayfanın altına al */
+    }
+
+    .social-container img { /* İkonlar için genel stil */
+        width: 25px; /* İkon boyutunu ayarla */
+        height: 25px; /* İkon yüksekliğini ayarla */
+    }
+}
     
 
 /* PC Görünümünde Sabit Öğeler */
@@ -517,5 +502,4 @@ body {
         width: 100%;
         z-index: 1000; /* En üstte görünmesi için */
     }
-}
 }
