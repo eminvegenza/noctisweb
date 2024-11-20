@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Bu süreçte becerilerimi geliştirdim ve yeni teknolojilere adapte olmayı öğrendim.
     
     
-    E♥Z
+
     `;
 
     let index = 0;
